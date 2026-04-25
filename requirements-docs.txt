@@ -1,0 +1,9 @@
+mkdocs==1.6.1
+mkdocs-material==9.5.44
+mkdocs-glightbox==0.4.0
+mkdocs-awesome-pages-plugin==2.9.3
+pymdown-extensions==10.12
+# Pin Pygments — pymdown-extensions 10.12 trips an AttributeError on
+# Pygments 2.20+ where the highlight formatter receives filename=None
+# from pymdownx instead of an empty string. 2.19.2 is the last known-good.
+Pygments==2.19.2

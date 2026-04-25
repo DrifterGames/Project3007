@@ -1,0 +1,134 @@
+site_name: VNFramework Wiki
+site_description: Documentation for the VNFramework Unreal Engine plugin — a designer-first visual novel framework.
+site_url: https://driftergames.github.io/Project3007/
+repo_url: https://github.com/DrifterGames/Project3007
+repo_name: DrifterGames/Project3007
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+
+plugins:
+  - search
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      zoomable: true
+      draggable: false
+  - awesome-pages
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+nav:
+  - Home: index.md
+  - Designers:
+      - designers/index.md
+      - Getting Started:
+          - designers/getting-started/installation.md
+          - designers/getting-started/first-project.md
+          - designers/getting-started/first-scene.md
+          - designers/getting-started/first-choice.md
+      - Concepts:
+          - designers/concepts/data-assets.md
+          - designers/concepts/variables-scopes.md
+          - designers/concepts/expressions.md
+          - designers/concepts/transitions.md
+          - designers/concepts/audio.md
+      - Reference:
+          - designers/reference/project-asset.md
+          - designers/reference/chapter-asset.md
+          - designers/reference/scene-asset.md
+          - designers/reference/character-asset.md
+          - designers/reference/background-asset.md
+          - designers/reference/theme-pack.md
+      - Importers:
+          - designers/importers/csv.md
+          - designers/importers/ink.md
+          - designers/importers/yarn.md
+  - Developers:
+      - developers/index.md
+      - developers/architecture.md
+      - API Reference:
+          - developers/api/vncore.md
+          - developers/api/vnui.md
+          - developers/api/vneditor.md
+      - Extending:
+          - developers/extending/custom-widgets.md
+          - developers/extending/custom-transitions.md
+          - developers/extending/save-system.md
+          - developers/extending/settings-overrides.md
+      - VNMCP:
+          - developers/vnmcp/overview.md
+          - developers/vnmcp/recipes.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/DrifterGames/Project3007
+  generator: false
+
+copyright: VNFramework documentation — built with MkDocs Material
